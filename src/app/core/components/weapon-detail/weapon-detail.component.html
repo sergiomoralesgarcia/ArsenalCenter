@@ -18,7 +18,7 @@
       <ion-label position="floating" >
         Type
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="type"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
@@ -36,21 +36,21 @@
       <ion-label position="floating" >
         Scope
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="scope"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
         Cadence
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="cadence"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
         Mobility
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="mobility"></ion-input>
     </ion-item>
     
-    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Change"}}</ion-button>
+    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
   </form>
 </ion-content>
