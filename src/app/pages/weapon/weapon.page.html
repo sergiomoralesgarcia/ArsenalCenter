@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-back-button slot="start" defaultHref="/">Home</ion-back-button>
+    <ion-title >
+      Weapon
+    </ion-title>
+    <ion-button (click)="onNewWeapon()" slot="end" style="margin:10px;width:50px;height:50px;--border-radius:50%;margin-right: 2%;" icon-only><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+  
+  
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let weapons of getWeapon()" size="12" size-lg="4" size-sm="6">
+        <app-weapons [weapon]="weapons" (onEdit)="onEditWeapon($event)"(onDelete)="onDeleteWeapon($event)" ></app-weapons>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

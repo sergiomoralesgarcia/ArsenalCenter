@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar >
+    <ion-title >
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  <video autoplay loop id="myVideo">
+    <source src="assets/greenBack.mp4" type="video/mp4">
+  </video>
+
+
+  <div id="container">
+    <p >Home</p>
+    <a title="Aquí ponemos el título de la foto">
+      <img id="img-weapon" (click)="openWeapon()" src="assets/guns.jfif" alt="Armas" width="300" height="203" />
+      <img id="img-charger" (click)="openAccessory()" src="assets/cargadores.jpg" alt="cargadores" width="300" height="203" />
+      <img id="img-const" (click)="openConstruct()" src="assets/ark7.webp" alt="cargadores" width="300" height="203" />
+      </a>
+  </div>
+</ion-content>

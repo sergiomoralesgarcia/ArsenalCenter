@@ -1,0 +1,106 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#myVideo{
+  width: 100%;
+}
+
+ion-toolbar{
+  --background: #44EF02;
+  color: rgb(0, 0, 0);
+}
+
+ion-content {
+  position: relative;
+  margin: 0;
+}
+.sect {
+  width: 100%;
+  min-height: 500px;
+}
+h1 {
+  margin: 0;
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+h2 {
+  margin: 0;
+  padding-top: 3rem;
+  padding-left: 2rem;
+}
+
+#img-weapon{
+  padding: 10px;
+  height: auto;
+}
+#img-charger{
+  padding: 10px;
+}
+#img-const{
+  padding: 10px;
+}
+/*
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 1;
+  bottom: 1;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #57575727;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}*/

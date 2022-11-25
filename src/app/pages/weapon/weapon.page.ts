@@ -1,0 +1,107 @@
+import { Component, OnInit } from '@angular/core';
+import { AlertController, ModalController } from '@ionic/angular';
+import { WeaponDetailComponent } from 'src/app/core/components/weapon-detail/weapon-detail.component';
+import { Weapon } from 'src/app/core/models/weapon.model';
+import { weaponService } from 'src/app/core/services/weapon.service';
+
+@Component({
+  selector: 'app-weapon',
+  templateUrl: './weapon.page.html',
+  styleUrls: ['./weapon.page.scss'],
+})
+export class WeaponPage implements OnInit {
+
+  constructor(private gun:weaponService,
+    private alert:AlertController,
+    private modal: ModalController,
+    private weaponService:weaponService,) { }
+
+  ngOnInit() {
+  }
+  
+  getWeapon(){ 
+    return this.gun.getWeapon(); 
+  }
+
+  async presentWeaponForm(weapon:Weapon){
+    const modal = await this.modal.create ({
+      component:WeaponDetailComponent,
+      componentProps:{
+        weapon:weapon
+      }
+    });
+    modal.present();
+    modal.onDidDismiss().then(result=>{
+      if(result && result.data){
+        switch(result.data.mode){
+          case 'New':
+            this.weaponService.addWeapon(result.data.weapon);
+            break;
+          case 'Edit':
+            this.weaponService.updateWeapon(result.data.weapon);
+            break;
+          default:
+        }
+      }
+    });
+  }
+  
+  onNewWeapon(){
+    this.presentWeaponForm(null!);
+    
+  }
+
+  onEditWeapon(weapon: Weapon){
+    this.presentWeaponForm(weapon);
+  }
+
+  async onDeleteAlert(weapon: Weapon){
+    const alert = await this.alert.create({
+      header: '¿Está seguro de que desear borrar a la persona?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          handler: () => {
+            console.log("Operacion cancelada");
+          },
+        },
+        {
+          text: 'Borrar',
+          role: 'confirm',
+          handler: () => {
+            this.weaponService.deleteWeaponById(weapon.id);
+          },
+        },
+      ],
+    });
+    await alert.present();
+
+  }
+
+  async onWeaponExistsAlert(){
+    const alert = await this.alert.create({
+      header: 'Error',
+      message: 'No es posible borrar la persona porque está asignada a una tarea',
+      buttons: [
+        {
+          text: 'Cerrar',
+          role: 'close',
+          handler: () => {
+            
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+  }
+
+  
+  onDeleteWeapon(weapon: Weapon){
+      this.onDeleteAlert(weapon);
+  }
+}
+

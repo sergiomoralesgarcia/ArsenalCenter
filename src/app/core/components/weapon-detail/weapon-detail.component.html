@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Details of weapon</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDismiss()" >Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating" translate >
+        Name
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce el nombre" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Type
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Damage
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce el apodo" formControlName="damage"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Precision
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Scope
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Cadence
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Mobility
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+    </ion-item>
+    
+    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Change"}}</ion-button>
+  </form>
+</ion-content>
