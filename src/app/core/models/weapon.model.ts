@@ -3,8 +3,8 @@ export interface Weapon{
     name:string;
     type:string;
     damage:number;
-    precision:number;
-    scope:number;
+    accuracy:number;
+    range:number;
     cadence:number;
     mobility:number;
     image?:string;

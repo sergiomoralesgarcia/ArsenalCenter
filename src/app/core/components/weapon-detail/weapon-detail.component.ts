@@ -18,8 +18,8 @@ export class WeaponDetailComponent implements OnInit {
       this.form.controls['name'].setValue(weapon.name);
       this.form.controls['type'].setValue(weapon.type);
       this.form.controls['damage'].setValue(weapon.damage);
-      this.form.controls['precision'].setValue(weapon.precision);
-      this.form.controls['scope'].setValue(weapon.scope);
+      this.form.controls['accuracy'].setValue(weapon.accuracy);
+      this.form.controls['range'].setValue(weapon.range);
       this.form.controls['cadence'].setValue(weapon.cadence);
       this.form.controls['mobility'].setValue(weapon.mobility);
       this.form.controls['image'].setValue(weapon.image);
@@ -37,8 +37,8 @@ export class WeaponDetailComponent implements OnInit {
       name:['', [Validators.required]],
       type:['', [Validators.required]],
       damage:['', [Validators.required]],
-      precision:['', [Validators.required]],
-      scope:['', [Validators.required]],
+      accuracy:['', [Validators.required]],
+      range:['', [Validators.required]],
       cadence:['', [Validators.required]],
       mobility:['', [Validators.required]],
       image:['']

@@ -9,58 +9,58 @@ export class weaponService {
     private _weapon: Weapon[] = [
         {
             id: 1,
-            name: 'FAMAS FR.556',
-            type: 'Medium',
-            damage:  67,
-            precision:55,
-            scope:42,
-            cadence:61,
-            mobility:61,
-            image: "https://drive.google.com/uc?export=view&id=1g56LqrevlhL7Os6n-e6rIztuWtuScJk9"
+            name: 'SNIPER RIFLE',
+            type: 'Heavy',
+            damage: 79,
+            accuracy: 82,
+            range: 75,
+            cadence: 38,
+            mobility: 47,
+            image: "https://drive.google.com/uc?export=view&id=1nTK6ejIhts2B7nn9kTW9rqhNuQpdUIUH"
         },
         {
             id: 2,
-            name: 'Alejandro Cueto',
-            type: 'Friki',
-            damage:  13,
-            precision:32,
-            scope:542,
-            cadence:54,
-            mobility:54,
-            image: "https://drive.google.com/uc?export=view&id=1hItKLZcDnmW_dlxEdCSw63opdT4YzILI"
+            name: 'M16',
+            type: 'Medium',
+            damage: 71,
+            accuracy: 67,
+            range: 67,
+            cadence: 48,
+            mobility: 67,
+            image: "https://drive.google.com/uc?export=view&id=1iZcs9FHP-xlgaq7DdKd-wJV0u0Odr-j1"
         },
         {
             id: 3,
-            name: 'Alberto Parra',
-            type: 'Parringson',
-            damage:  13,
-            precision:32,
-            scope:542,
-            cadence:54,
-            mobility:54,
-            image: "https://drive.google.com/uc?export=view&id=1oCzWNoF1yiDxgA09tzTvC9nEy1DS3Dev"
+            name: 'P90',
+            type: 'Light',
+            damage: 72,
+            accuracy: 70,
+            range: 51,
+            cadence: 81,
+            mobility: 79,
+            image: "https://drive.google.com/uc?export=view&id=1L7QNOCjsV_Rr-rF6VRhklOuQ70aLhSdZ"
         },
         {
             id: 4,
-            name: 'Álvaro Linero',
-            type: 'ElRey',
-            damage:  13,
-            precision:32,
-            scope:542,
-            cadence:54,
-            mobility:54,
-            image: "https://drive.google.com/uc?export=view&id=103p4Uf-nW5VW72qGXq37N9GRruRf1oxC"
+            name: 'AK-47',
+            type: 'Medium',
+            damage: 77,
+            accuracy: 74,
+            range: 75,
+            cadence: 62,
+            mobility: 69,
+            image: "https://drive.google.com/uc?export=view&id=1vUkAWpEKNfQpEjx0BGEFNCUk5BQA_Moj"
         },
         {
             id: 5,
-            name: 'David Antúnez',
-            type: 'Fernando Alonso',
-            damage:  13,
-            precision:32,
-            scope:542,
-            cadence:54,
-            mobility:54,
-            image: "https://drive.google.com/uc?export=view&id=1n8cnVuQSsdoZ5cjKc4fnua9tHZUhErVf"
+            name: 'FAMAS',
+            type: 'Medium',
+            damage: 44,
+            accuracy: 91,
+            range: 63,
+            cadence: 70,
+            mobility: 67,
+            image: "https://drive.google.com/uc?export=view&id=15wsXzzLJoiZFOqss6KSNFpOqhegA2tsA"
         }
     ]
 
@@ -90,11 +90,11 @@ export class weaponService {
     updateWeapon(weapon: Weapon) {
         var _weapon = this._weapon.find(p => p.id == weapon.id);
         if (_weapon) {
-            _weapon.name = _weapon.name;
+            _weapon.name = weapon.name;
             _weapon.type = weapon.type;
             _weapon.damage = weapon.damage;
-            _weapon.precision = weapon.precision;
-            _weapon.scope = weapon.scope;
+            _weapon.accuracy = weapon.accuracy;
+            _weapon.range = weapon.range;
             _weapon.cadence = weapon.cadence;
             _weapon.mobility = weapon.mobility;
             _weapon.image = weapon.image;

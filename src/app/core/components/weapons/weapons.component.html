@@ -1,13 +1,11 @@
 <ion-card>
   <ion-card-header>
-    <ion-avatar class="person">
       <img *ngIf="!weapon.image" src="\assets\user.png" />
-      <img *ngIf="weapon.image" alt="Person image" [src]="weapon.image" />
-    </ion-avatar>
-    <ion-card-title>{{weapon.name}}</ion-card-title>
+      <img *ngIf="weapon.image" alt="Weapon image" [src]="weapon.image" />
+    <ion-card-title>{{weapon.name}}, {{weapon.type}}</ion-card-title>
     <ion-card-subtitle>Damage: {{weapon.damage}}/100</ion-card-subtitle>
-    <ion-card-subtitle>Precision: {{weapon.precision}}/100</ion-card-subtitle>
-    <ion-card-subtitle>Scope: {{weapon.scope}}/100</ion-card-subtitle>
+    <ion-card-subtitle>Accuracy: {{weapon.accuracy}}/100</ion-card-subtitle>
+    <ion-card-subtitle>Range: {{weapon.range}}/100</ion-card-subtitle>
     <ion-card-subtitle>Cadence: {{weapon.cadence}}/100</ion-card-subtitle>
     <ion-card-subtitle>Mobility: {{weapon.mobility}}/100</ion-card-subtitle>
     <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="pencil-sharp"></ion-icon></ion-button>

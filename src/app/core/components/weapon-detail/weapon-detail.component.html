@@ -9,7 +9,7 @@
 <ion-content class="ion-padding">
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
-      <ion-label position="floating" translate >
+      <ion-label position="floating"  >
         Name
       </ion-label>
       <ion-input type="text" placeholder="Introduce el nombre" formControlName="name"></ion-input>
@@ -18,7 +18,7 @@
       <ion-label position="floating" >
         Type
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="type"></ion-input>
+      <ion-input type="text" placeholder="Introduce el tipo" formControlName="type"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
@@ -28,27 +28,27 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Precision
+        Accuracy
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="precision"></ion-input>
+      <ion-input type="text" placeholder="Introduce la precision" formControlName="accuracy"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Scope
+        Range
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="scope"></ion-input>
+      <ion-input type="text" placeholder="Introduce el rango de tiro" formControlName="range"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
         Cadence
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="cadence"></ion-input>
+      <ion-input type="text" placeholder="Introduce la cadencia" formControlName="cadence"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
         Mobility
       </ion-label>
-      <ion-input type="text" placeholder="Introduce la edad" formControlName="mobility"></ion-input>
+      <ion-input type="text" placeholder="Introduce la mobilidad" formControlName="mobility"></ion-input>
     </ion-item>
     
     <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
