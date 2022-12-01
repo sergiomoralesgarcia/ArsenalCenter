@@ -84,6 +84,14 @@ h2 {
   background: #3bbc08ed; 
   color:#fff;
 }
+
+.zoom {
+  transition: transform .3s; 
+}
+
+.zoom:hover {
+  transform: scale(1.1); 
+}
 /*
 .container {
   position: relative;

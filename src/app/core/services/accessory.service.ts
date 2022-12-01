@@ -11,11 +11,11 @@ export class accessoryService {
             id: 1,
             name: 'SNIPER RIFLE',
             type: 'Heavy',
-            damage: 79,
-            accuracy: 82,
-            range: 75,
-            cadence: 38,
-            mobility: 47,
+            damage: -79,
+            accuracy: -82,
+            range: -75,
+            cadence: -38,
+            mobility: -47,
             image: "https://drive.google.com/uc?export=view&id=1nTK6ejIhts2B7nn9kTW9rqhNuQpdUIUH"
         },
         {

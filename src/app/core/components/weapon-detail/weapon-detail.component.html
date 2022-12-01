@@ -51,6 +51,6 @@
       <ion-input type="text" placeholder="Introduce la mobilidad" formControlName="mobility"></ion-input>
     </ion-item>
     
-    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+    <ion-button color="success" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
   </form>
 </ion-content>
