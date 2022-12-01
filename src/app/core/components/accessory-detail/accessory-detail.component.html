@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Details of accessories</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDismiss()" >Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating"  >
+        Name
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce el nombre" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Type
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce el tipo" formControlName="type"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Damage
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce el apodo" formControlName="damage"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Accuracy
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la precision" formControlName="accuracy"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Range
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce el rango de disparo" formControlName="range"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Cadence
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la cadencia" formControlName="cadence"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >
+        Mobility
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la mobilidad" formControlName="mobility"></ion-input>
+    </ion-item>
+    
+    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+  </form>
+</ion-content>
+

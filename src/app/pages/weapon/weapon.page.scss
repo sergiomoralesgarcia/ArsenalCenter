@@ -1,0 +1,16 @@
+ion-toolbar{
+    --background: #000000bc;
+    color: rgba(255, 255, 255, 0.892);
+}
+
+ion-grid{
+    background-image: url("../../../assets/greenBackImg.jpg");
+    background-size: 700px;
+    
+}
+
+::selection { 
+    background: #3bbc08ed;
+    color:#fff;
+}
+

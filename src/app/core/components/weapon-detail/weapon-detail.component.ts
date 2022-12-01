@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { ModalController } from '@ionic/angular';
+import { CheckboxCustomEvent, ModalController } from '@ionic/angular';
 import { Weapon } from '../../models/weapon.model';
 
 @Component({
@@ -44,8 +44,19 @@ export class WeaponDetailComponent implements OnInit {
       image:['']
     });
   }
-  ngOnInit() {
 
+  canDismiss = false;
+  presentingElement = null;
+
+
+
+
+  ngOnInit() {
+  }
+
+  onTermsChanged(event: Event) {
+    const ev = event as CheckboxCustomEvent;
+    this.canDismiss = ev.detail.checked;
   }
 
   onSubmit(){

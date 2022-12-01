@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { AccessoryPageRoutingModule } from './accessory-routing.module';
 
 import { AccessoryPage } from './accessory.page';
+import { CoreComponentModule } from "../../core/core.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AccessoryPageRoutingModule
-  ],
-  declarations: [AccessoryPage]
+    declarations: [AccessoryPage],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        AccessoryPageRoutingModule,
+        CoreComponentModule
+    ]
 })
 export class AccessoryPageModule {}

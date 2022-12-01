@@ -2,3 +2,21 @@ img{
     border-radius: 10px;
     position:relative;
 }
+
+ion-card{
+    background-color: rgb(47, 54, 50);
+    
+}
+
+ion-card-title{
+    color: rgb(252, 252, 252);
+}
+
+ion-card-subtitle{
+    color: rgb(252, 252, 252);
+}
+
+::selection { 
+    background: #3bbc08ed; 
+    color:#fff;
+}
