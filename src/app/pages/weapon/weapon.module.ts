@@ -9,6 +9,13 @@ import { WeaponPageRoutingModule } from './weapon-routing.module';
 import { WeaponPage } from './weapon.page';
 import { CoreComponentModule } from "../../core/core.module";
 
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+}
+
 @NgModule({
     declarations: [WeaponPage],
     imports: [
@@ -16,7 +23,15 @@ import { CoreComponentModule } from "../../core/core.module";
         FormsModule,
         IonicModule,
         WeaponPageRoutingModule,
-        CoreComponentModule
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: createTranslateLoader,
+                deps: [HttpClient]
+            }
+        }),
+        CoreComponentModule,
+
     ]
 })
-export class WeaponPageModule {}
+export class WeaponPageModule { }

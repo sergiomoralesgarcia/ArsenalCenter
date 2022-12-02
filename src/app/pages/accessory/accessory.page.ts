@@ -3,6 +3,7 @@ import { AlertController, ModalController } from '@ionic/angular';
 import { AccessoryDetailComponent } from 'src/app/core/components/accessory-detail/accessory-detail.component';
 import { Accessory } from 'src/app/core/models/accessory.model';
 import { accessoryService } from 'src/app/core/services/accessory.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-accessory',
@@ -11,10 +12,17 @@ import { accessoryService } from 'src/app/core/services/accessory.service';
 })
 export class AccessoryPage implements OnInit {
 
+  language: string = this.translateService.currentLang;
+
   constructor(private gun:accessoryService,
     private alert:AlertController,
     private modal: ModalController,
-    private accessoryService:accessoryService,) { }
+    private accessoryService:accessoryService,
+    private translateService: TranslateService) { }
+
+    languageChange() {  
+      this.translateService.use(this.language); 
+    }
 
   ngOnInit() {
   }

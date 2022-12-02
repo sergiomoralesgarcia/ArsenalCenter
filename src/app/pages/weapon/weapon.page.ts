@@ -3,6 +3,7 @@ import { AlertController, ModalController } from '@ionic/angular';
 import { WeaponDetailComponent } from 'src/app/core/components/weapon-detail/weapon-detail.component';
 import { Weapon } from 'src/app/core/models/weapon.model';
 import { weaponService } from 'src/app/core/services/weapon.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-weapon',
@@ -11,10 +12,17 @@ import { weaponService } from 'src/app/core/services/weapon.service';
 })
 export class WeaponPage implements OnInit {
 
+  language: string = this.translateService.currentLang;
+
   constructor(private gun:weaponService,
     private alert:AlertController,
     private modal: ModalController,
-    private weaponService:weaponService,) { }
+    private weaponService:weaponService, 
+    private translateService: TranslateService) { }
+
+    languageChange() {  // add this
+      this.translateService.use(this.language);  // add this
+    }
 
   ngOnInit() {
   }

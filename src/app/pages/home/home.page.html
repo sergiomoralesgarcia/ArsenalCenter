@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar >
     <ion-title >
-      Home
+      {{ 'home.tabName' | translate }}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,13 +12,20 @@
       <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <div>
+      <ion-label translate>Language</ion-label>
+      <ion-select [(ngModel)]='language' (ionChange)='languageChange()' [placeholder]='"home.languageChangePlaceholder" | translate'>
+        <ion-select-option value='es'>Español</ion-select-option>
+        <ion-select-option value='en'>English</ion-select-option>
+      </ion-select>
+    </div>
   
   <video src="assets/greenBack.mp4" autoplay="true"  muted="true" id="myVideo"></video>
 // loop="true"
 
   <div id="container">
-    <p >Home</p>
+    
+    <p  translate [translateParams]="{ lang: language }">home.content</p>
     <a title="Aquí ponemos el título de la foto">
       <img class="zoom" id="img-weapon" (click)="openWeapon()" src="assets/guns.jfif" alt="Armas" width="300" height="203" />
       <img class="zoom" id="img-charger" (click)="openAccessory()" src="assets/cargadores.jpg" alt="cargadores" width="300" height="203" />

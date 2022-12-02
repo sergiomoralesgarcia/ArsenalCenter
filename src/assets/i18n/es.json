@@ -1,25 +1,25 @@
 {
     "home": {
-        "tabName": "Home",
-        "content": "Ingles",
-        "languageChangePlaceholder": "Change languaje"
+        "tabName": "Inicio",
+        "content": "Español",
+        "languageChangePlaceholder": "Cambia el idioma"
     },
-    "Language": "English",
+    "Language": "Español",
 
     "weapon": {
-        "tabName": "Weapons",
+        "tabName": "Armas",
         "content": "Ingles",
         "languageChangePlaceholder": "Change languaje"
     },
 
     "accessory": {
-        "tabName": "Accessories",
+        "tabName": "Accesorios",
         "content": "Ingles",
         "languageChangePlaceholder": "Change languaje"
     },
 
     "construction": {
-        "tabName": "Constructions",
+        "tabName": "Construcciones",
         "content": "Ingles",
         "languageChangePlaceholder": "Change languaje"
     }
