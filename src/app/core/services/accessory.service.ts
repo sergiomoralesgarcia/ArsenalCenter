@@ -9,58 +9,58 @@ export class accessoryService {
     private _accessory: Accessory[] = [
         {
             id: 1,
-            name: 'SNIPER RIFLE',
-            type: 'Heavy',
-            damage: -79,
-            accuracy: -82,
-            range: -75,
-            cadence: -38,
-            mobility: -47,
-            image: "https://drive.google.com/uc?export=view&id=1nTK6ejIhts2B7nn9kTW9rqhNuQpdUIUH"
+            name: 'Charger',
+            type: 'Medium',
+            damage: 0,
+            accuracy: 5,
+            range: 2,
+            cadence: 0,
+            mobility: -6,
+            image: "https://drive.google.com/uc?export=view&id=12qZQ-Bdq3_Jg1JJ4ZQaFxr9r_fX4PQ4t"
         },
         {
             id: 2,
-            name: 'M16',
+            name: 'Butt',
             type: 'Medium',
-            damage: 71,
-            accuracy: 67,
-            range: 67,
-            cadence: 48,
-            mobility: 67,
-            image: "https://drive.google.com/uc?export=view&id=1iZcs9FHP-xlgaq7DdKd-wJV0u0Odr-j1"
+            damage: 1,
+            accuracy: 8,
+            range: 0,
+            cadence: 0,
+            mobility: 2,
+            image: "https://drive.google.com/uc?export=view&id=1cUnNzgMOdEpMY47WVNHtEOZEBqinFVpV"
         },
         {
             id: 3,
-            name: 'P90',
+            name: 'Butt',
             type: 'Light',
-            damage: 72,
-            accuracy: 70,
-            range: 51,
-            cadence: 81,
-            mobility: 79,
-            image: "https://drive.google.com/uc?export=view&id=1L7QNOCjsV_Rr-rF6VRhklOuQ70aLhSdZ"
+            damage: 0,
+            accuracy: 6,
+            range: 1,
+            cadence: 0,
+            mobility: 9,
+            image: "https://drive.google.com/uc?export=view&id=1vizR9usGtvYUob7DJ8H_jNaPsuCVgQg9"
         },
         {
             id: 4,
-            name: 'AK-47',
-            type: 'Medium',
+            name: 'Sight',
+            type: 'Hight',
             damage: 77,
             accuracy: 74,
             range: 75,
             cadence: 62,
             mobility: 69,
-            image: "https://drive.google.com/uc?export=view&id=1vUkAWpEKNfQpEjx0BGEFNCUk5BQA_Moj"
+            image: "https://drive.google.com/uc?export=view&id=13VZmVQboVQDd6fhRbYavah9dng4DCg2u"
         },
         {
             id: 5,
-            name: 'FAMAS',
+            name: 'Silencer',
             type: 'Medium',
-            damage: 44,
-            accuracy: 91,
-            range: 63,
-            cadence: 70,
-            mobility: 67,
-            image: "https://drive.google.com/uc?export=view&id=15wsXzzLJoiZFOqss6KSNFpOqhegA2tsA"
+            damage: -4,
+            accuracy: 6,
+            range: 4,
+            cadence: 0,
+            mobility: 0,
+            image: "https://drive.google.com/uc?export=view&id=1PgI98X1BdfHrP_xMF4_affZFPqJb9VH9"
         }
     ]
 
