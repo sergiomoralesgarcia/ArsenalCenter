@@ -57,7 +57,7 @@ export class WeaponPage implements OnInit {
 
   async onDeleteAlert(weapon: Weapon){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que desear borrar a la persona?',
+      header: 'Are you sure that you want delete the weapon?',
       buttons: [
         {
           text: 'Cancelar',
@@ -82,7 +82,7 @@ export class WeaponPage implements OnInit {
   async onWeaponExistsAlert(){
     const alert = await this.alert.create({
       header: 'Error',
-      message: 'No es posible borrar la persona porque está asignada a una tarea',
+      message: 'No es posible borrar el arma porque está asignada a un accesorio',
       buttons: [
         {
           text: 'Cerrar',
