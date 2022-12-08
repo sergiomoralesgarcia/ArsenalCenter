@@ -1,27 +1,21 @@
 {
     "home": {
-        "tabName": "Home",
+        "tabName": "home",
         "content": "Ingles",
         "languageChangePlaceholder": "Change languaje"
     },
     "Language": "English",
 
     "weapon": {
-        "tabName": "Weapons",
-        "content": "Ingles",
-        "languageChangePlaceholder": "Change languaje"
+        "tabName": "weapons"
     },
 
     "accessory": {
-        "tabName": "Accessories",
-        "content": "Ingles",
-        "languageChangePlaceholder": "Change languaje"
+        "tabName": "accessories"
     },
 
     "construction": {
-        "tabName": "Constructions",
-        "content": "Ingles",
-        "languageChangePlaceholder": "Change languaje"
+        "title": "constructions"
     },
 
     "weapons": {

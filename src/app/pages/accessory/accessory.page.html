@@ -2,7 +2,7 @@
   <ion-toolbar>
       <ion-back-button slot="start" defaultHref="/">Home</ion-back-button>
     <ion-title >
-      {{ 'accessory.tabName' | translate }}
+      {{ 'accessory.tabName' | translate | titlecase}}
     </ion-title>
     <ion-button color="success" (click)="onNewAccessory()" slot="end" style="margin:10px;width:50px;height:50px;--border-radius:50%;margin-right: 2%;" icon-only><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-button>
   </ion-toolbar>

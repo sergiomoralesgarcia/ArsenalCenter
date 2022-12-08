@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar >
     <ion-title >
-      {{ 'home.tabName' | translate }}
+      {{ 'home.tabName' | translate | titlecase}}
     </ion-title>
     <ion-button color="success" (click)="openAbout()" slot="end"><ion-icon name="help-circle-outline"></ion-icon></ion-button>
   </ion-toolbar>

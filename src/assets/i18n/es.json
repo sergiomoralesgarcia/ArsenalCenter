@@ -1,27 +1,21 @@
 {
     "home": {
-        "tabName": "Inicio",
+        "tabName": "inicio",
         "content": "Español",
         "languageChangePlaceholder": "Cambia el idioma"
     },
     "Language": "Español",
 
     "weapon": {
-        "tabName": "Armas",
-        "content": "Ingles",
-        "languageChangePlaceholder": "Change languaje"
+        "tabName": "armas"
     },
 
     "accessory": {
-        "tabName": "Accesorios",
-        "content": "Ingles",
-        "languageChangePlaceholder": "Change languaje"
+        "tabName": "accesorios"
     },
 
     "construction": {
-        "tabName": "Construcciones",
-        "content": "Ingles",
-        "languageChangePlaceholder": "Change languaje"
+        "title": "construcciones"
     },
 
     "weapons": {

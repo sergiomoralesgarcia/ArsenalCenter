@@ -1,14 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, forwardRef, OnInit } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
 import { Accessory } from '../../models/accessory.model';
 import { accessoryService } from '../../services/accessory.service';
+
+export const ACCESSORY_VALUE_ACCESSOR: any = {
+  provide: NG_VALUE_ACCESSOR,
+  useExisting: forwardRef(() => AccessorySelectableComponent),
+  multi: true
+};
 
 @Component({
   selector: 'app-accessory-selectable',
   templateUrl: './accessory-selectable.component.html',
   styleUrls: ['./accessory-selectable.component.scss'],
+  providers: [ACCESSORY_VALUE_ACCESSOR],
 })
-export class AccessorySelectableComponent implements OnInit {
+export class AccessorySelectableComponent implements OnInit, ControlValueAccessor {
 
   selectedAccessory:Accessory=null!;
   propagateChange = (_: any) => { }
