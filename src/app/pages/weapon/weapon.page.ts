@@ -20,8 +20,8 @@ export class WeaponPage implements OnInit {
     private weaponService:weaponService, 
     private translateService: TranslateService) { }
 
-    languageChange() {  // add this
-      this.translateService.use(this.language);  // add this
+    languageChange() {  
+      this.translateService.use(this.language); 
     }
 
   ngOnInit() {

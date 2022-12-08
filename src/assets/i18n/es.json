@@ -22,5 +22,21 @@
         "tabName": "Construcciones",
         "content": "Ingles",
         "languageChangePlaceholder": "Change languaje"
+    },
+
+    "weapons": {
+        "damage": "Daño",
+        "accuracy": "Precisión",
+        "range": "Rango",
+        "cadence": "Cadencia",
+        "mobility": "Mobilidad"
+    },
+
+    "accessories": {
+        "damage": "Daño",
+        "accuracy": "Precisión",
+        "range": "Rango",
+        "cadence": "Cadencia",
+        "mobility": "Mobilidad"
     }
 }

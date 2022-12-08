@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CheckboxCustomEvent, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { Accessory } from '../../models/accessory.model';
 
 @Component({
@@ -27,10 +28,12 @@ export class AccessoryDetailComponent implements OnInit {
     }
   }
   
+  language: string = this.translateService.currentLang;
 
   constructor(
     private fb:FormBuilder,
-    private modal:ModalController
+    private modal:ModalController,
+    private translateService: TranslateService
   ) { 
     this.form = this.fb.group({
       id:[null],
@@ -43,6 +46,10 @@ export class AccessoryDetailComponent implements OnInit {
       mobility:['', [Validators.required]],
       image:['']
     });
+  }
+
+  languageChange() {  
+    this.translateService.use(this.language); 
   }
 
   canDismiss = false;

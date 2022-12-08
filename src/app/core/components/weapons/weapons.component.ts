@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Weapon } from '../../models/weapon.model';
 
 @Component({
@@ -11,8 +12,13 @@ export class WeaponsComponent implements OnInit {
     @Output() onDelete = new EventEmitter;
     @Input() weapon: Weapon;
     
+    language: string = this.translateService.currentLang;
     
-    constructor() { }
+    constructor(private translateService: TranslateService) { }
+
+    languageChange() {  
+      this.translateService.use(this.language); 
+    }
   
     ngOnInit() {}
   

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Accessory } from '../../models/accessory.model';
 
 @Component({
@@ -12,7 +13,13 @@ export class AccessoriesComponent implements OnInit {
   @Output() onDelete = new EventEmitter;
   @Input() accessory: Accessory;
 
-  constructor() { }
+  language: string = this.translateService.currentLang;
+
+  constructor(private translateService: TranslateService) { }
+
+  languageChange() {  
+    this.translateService.use(this.language); 
+  }
 
   ngOnInit() { }
 

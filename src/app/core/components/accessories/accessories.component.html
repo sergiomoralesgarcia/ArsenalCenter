@@ -1,13 +1,13 @@
 <ion-card>
-  <ion-card-header>
+  <ion-card-header [translucent]="true">
       <img *ngIf="!accessory.image" src="\assets\user.png" />
       <img *ngIf="accessory.image" alt="Accessory image" [src]="accessory.image" />
     <ion-card-title>{{accessory.name}}, {{accessory.type}}</ion-card-title>
-    <ion-card-subtitle>Damage: {{accessory.damage}}/10</ion-card-subtitle>
-    <ion-card-subtitle>Accuracy: {{accessory.accuracy}}/10</ion-card-subtitle>
-    <ion-card-subtitle>Range: {{accessory.range}}/10</ion-card-subtitle>
-    <ion-card-subtitle>Cadence: {{accessory.cadence}}/10</ion-card-subtitle>
-    <ion-card-subtitle>Mobility: {{accessory.mobility}}/10</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'accessories.damage' | translate }}: {{accessory.damage}}/10</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'accessories.accuracy' | translate }}: {{accessory.accuracy}}/10</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'accessories.range' | translate }}: {{accessory.range}}/10</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'accessories.cadence' | translate }}: {{accessory.cadence}}/10</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'accessories.mobility' | translate }}: {{accessory.mobility}}/10</ion-card-subtitle>
     <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="pencil-sharp"></ion-icon></ion-button>
     <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5" name="close-sharp"></ion-icon></ion-button>
   </ion-card-header>

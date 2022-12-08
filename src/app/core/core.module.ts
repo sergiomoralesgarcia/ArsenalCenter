@@ -10,10 +10,22 @@ import { WeaponPageRoutingModule } from '../pages/weapon/weapon-routing.module';
 import { AccessoryPageRoutingModule } from '../pages/accessory/accessory-routing.module';
 import { AccessoriesComponent } from './components/accessories/accessories.component';
 import { AccessoryDetailComponent } from './components/accessory-detail/accessory-detail.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+}
 
 
 @NgModule({
-    imports: [ CommonModule, FormsModule, IonicModule, RouterModule, WeaponPageRoutingModule, ReactiveFormsModule, AccessoryPageRoutingModule],
+    imports: [ CommonModule, FormsModule, IonicModule, RouterModule, WeaponPageRoutingModule, ReactiveFormsModule, AccessoryPageRoutingModule, TranslateModule.forChild({
+        loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+        }
+    })],
     declarations: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent],
     exports: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent]
 })
