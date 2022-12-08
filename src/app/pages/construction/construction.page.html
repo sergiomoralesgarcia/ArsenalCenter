@@ -1,9 +1,17 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>{{ 'construction.tabName' | translate }}</ion-title>
+    <ion-back-button  slot="start" defaultHref="/">Home</ion-back-button>
+    <ion-title>{{ 'cosntruction.title' | translate }}</ion-title>
+    <ion-button (click)="onNewConstruction()" slot="end" style="margin:10px;width:50px;height:50px;--border-radius:50%;margin-right: 2%;" icon-only><ion-icon style="zoom:2" name="add-outline"></ion-icon></ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let assignment of getConstructions()" size="12" size-lg="4" size-sm="6">
+      <app-assignment  [assignment]="assignment" (onEdit)="onEditAssign($event)" (onDelete)="onDeleteAssign($event)"></app-assignment>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>

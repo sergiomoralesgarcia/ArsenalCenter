@@ -38,5 +38,9 @@
         "range": "Range",
         "cadence": "Cadence",
         "mobility": "Mobility"
+    }, 
+
+    "about" : {
+        "title": "About me:"
     }
 }

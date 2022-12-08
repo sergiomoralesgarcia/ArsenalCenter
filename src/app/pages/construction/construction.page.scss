@@ -1,4 +1,16 @@
+ion-content{
+    position: relative;
+    margin: 0;
+    --background: url("../../../assets/greenBackImg.jpg");
+}
+
+ion-toolbar{
+    --background: #000000bc;
+    color: rgba(255, 255, 255, 0.892);
+}
+
+
 ::selection { 
-    background: #3bbc08ed; 
+    background: #3bbc08ed;
     color:#fff;
 }

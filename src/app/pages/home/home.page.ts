@@ -14,8 +14,8 @@ language: string = this.translateService.currentLang;
   constructor(public navCtrl: NavController, private translateService: TranslateService) {
   }
 
-  languageChange() {  // add this
-    this.translateService.use(this.language);  // add this
+  languageChange() {  
+    this.translateService.use(this.language);  
   }
 
   openWeapon() {
@@ -28,6 +28,10 @@ language: string = this.translateService.currentLang;
 
   openConstruct() {
     this.navCtrl.navigateForward("construction")
+  }
+
+  openAbout() {
+    this.navCtrl.navigateForward("about")
   }
   
 }
