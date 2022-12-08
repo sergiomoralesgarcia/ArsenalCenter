@@ -1,3 +1,9 @@
-<p>
-  constructions works!
-</p>
+<ion-card>
+  <ion-card-header>
+      <img id="tareas" *ngIf="getWeapon()?.image" alt="Person picture" [src]="getWeapon().image" /><h1>+</h1>
+      <img id="personas" *ngIf="getAccessory()?.image" alt="Person picture" [src]="getAccessory().image" />
+    <ion-card-subtitle>da</ion-card-subtitle>
+    <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="pencil-sharp"></ion-icon></ion-button>
+    <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5" name="close-sharp"></ion-icon></ion-button>
+  </ion-card-header>
+</ion-card>

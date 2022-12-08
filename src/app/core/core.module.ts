@@ -13,20 +13,23 @@ import { AccessoryDetailComponent } from './components/accessory-detail/accessor
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { ConstructionPageRoutingModule } from '../pages/construction/construction-routing.module';
+import { ConstructionDetailComponent } from './components/construction-detail/construction-detail.component';
+import { AccessorySelectableComponent } from './components/accessory-selectable/accessory-selectable.component';
+import { WeaponSelectableComponent } from './components/weapon-selectable/weapon-selectable.component';
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
 
-
 @NgModule({
-    imports: [ CommonModule, FormsModule, IonicModule, RouterModule, WeaponPageRoutingModule, ReactiveFormsModule, AccessoryPageRoutingModule, TranslateModule.forChild({
+    imports: [ CommonModule, FormsModule, IonicModule, RouterModule, WeaponPageRoutingModule, ReactiveFormsModule, AccessoryPageRoutingModule, ConstructionPageRoutingModule ,TranslateModule.forChild({
         loader: {
         provide: TranslateLoader,
         useFactory: createTranslateLoader,
         deps: [HttpClient]
         }
     })],
-    declarations: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent],
+    declarations: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent , ConstructionDetailComponent, AccessorySelectableComponent, WeaponSelectableComponent],
     exports: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent]
 })
 

@@ -1,3 +1,25 @@
-<p>
-  construction-detail works!
-</p>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Construction-detail </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onDismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
+    <app-weapon-selectable formControlName="idWeapon"></app-weapon-selectable>
+    <app-accessory-selectable formControlName="idAccessory"></app-accessory-selectable>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
+

@@ -1,0 +1,25 @@
+<ion-accordion-group [multiple]="true" #accordion>
+  <ion-accordion value="first">
+    <ion-item slot="header" color="light">
+      <ng-container *ngIf="selectedWeapon!=null">
+        <ion-avatar class="weapon">
+          <img *ngIf="!selectedWeapon?.image" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          <img *ngIf="selectedWeapon?.image" alt="Weapon image" [src]="selectedWeapon?.image" />
+        </ion-avatar>
+        <ion-label>{{selectedWeapon?.name}}</ion-label>
+      </ng-container>
+      <ion-label *ngIf="!selectedWeapon">Selecciona una tarea:</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-list>
+        <ion-item *ngFor="let weapon of getPeople()" button detail (click)="onWeaponClicked(weapon, accordion)">
+          <ion-avatar class="weapon">
+            <img *ngIf="!weapon.image" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            <img *ngIf="weapon.image" [src]="weapon.image" />
+          </ion-avatar>
+          <ion-label>{{weapon.name}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-accordion>
+</ion-accordion-group>
