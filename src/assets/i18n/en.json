@@ -35,6 +35,15 @@
     }, 
 
     "about" : {
-        "title": "About me:"
+        "title1": "About me",
+        "card1,1": "I introduce myself, I am Sergio Morales, student of the Higher Degree of Multiplatform Application Development of the C.P.I.F.P. Institute. New. I live in Malaga, I am 19 years old and I love sports, videogames, movies and music. I am a very open person who likes to meet people and who is open to live all kinds of new experiences and to learn as much as possible.",
+        "card1,2": "This project is a Crud developed for the subject of Data Access and Free Configuration Time. It is a web page where you can insert the weapons that you want with their own characteristics and the accessories that you see necessary to be able to add later to the weapons themselves. When combining a weapon with an accessory, its properties such as rate or range can change.",
+        "card1,3": "I've always played shooter games and I've always liked being able to customize my weapon with its own characteristics. This application simulates the armories of these video games, so you can design your favorite weapons here to later be able to implement and copy it in your favorite games.",
+        "card1,4": "All the information and content that exists is not copyrighted, they are free and can be used by anyone for free and without the need to name their authors.",
+        "title2": "Our partners",
+        "card2,1": "Our specialist in military weapons, José Antonio Benitez, has more than 15 years of experience behind him and with a great handling of weapons and a great knowledge of all kinds of their categories.",
+        "card2,2": "All the information has been reviewed by our specialist who has attended more than a dozen battlefields in which he has always emerged as a winner. It is capable of reloading a heavy rifle in 4.2 seconds and holds the world record for reloading an m16 in 2.5 seconds.",
+        "card2,3": "The Activision Blizard company itself hired him to design the weapons for its games in 2019. Since then, the company has grown by 200% and is now in a state of peak form.",
+        "card2,4": "In addition, with their analysts Alvaro Linero and David Antúnez, they have come to form a great alliance and have formed the largest arms purchase and sale network in the US, dominating the market and being the main suppliers of the US military."
     }
 }

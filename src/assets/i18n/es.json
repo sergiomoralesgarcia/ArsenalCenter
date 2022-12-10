@@ -35,6 +35,15 @@
     }, 
 
     "about" : {
-        "title": "Sobre mi:"
+        "title1": "Sobre mi",
+        "card1,1": "Me presento, soy Sergio Morales, estudiante del Grado Superior de Desarrollo de Aplicaciones Multiplataforma del intituto C.P.I.F.P. Nuevo. Vivo en Málaga, tengo 19 años y me encanta el deporte, los videojuegos, el cine y la música. Soy una persona muy abierta a la que le gusta conocer gente y que está abierta a vivir todo tipo de experiencias nuevas y a aprender en todo lo que sea posible.",
+        "card1,2": "Este proyecto es un Crud desarrollado para la asignatura de Acceso a Datos y de Hora de Libre Configuración. Se trata de una página web en la que puedes insertar las armas que tu quieras con sus propias características y los accesorios que veas necesarios para poder añadir más adelante a las propias armas. A la hora de combinar una arma con un complemento, sus propiedades como la cadencia o el rango pueden cambiar.",
+        "card1,3": "Siempre he jugado a videojuegos de disparos y siempre me ha gustado poder personalizar mi arma con sus propias características. Esta aplicación simula las armerías de estos videjuegos, por lo que tus armas favoritas puedes diseñarlas aquí para más tarde poder implementarlo y copiarlo en tus juegos favoritos.",
+        "title2": "Nuestros colaboradores",
+        "card1,4": "Toda información y contenido que haya no tiene derechos de autor, son libres y pueden ser usados por cualquiera de manera gratuita y sin necesidad de nombrar a los autores de los mismos.",
+        "card2,1": "Nuestro especialista en armamento militar, José Antonio Benitez, cuenta con más de 15 años de experiencia a sus espaldas y con un gran manejo de las armas y una gran conocimiento sobre toda clase de categorías de las mismas.",
+        "card2,2": "Toda la información ha sido revisada por nuestro especialista el cual ha asistido a más de una docena de campos de batalla en los que siempre ha salido ganador. Es capaz de recargar un rifle pesado en 4,2 segundos y tiene el record mundial de recargar una m16 en 2.5 segundos.",
+        "card2,3": "La propia compañía Activision Blizard lo contrató para diseñar las armas de sus juegos en el año 2019. Desde entonces, la compaía ha crecido un 200% y se encuentra ahora en un estado de forma pletórico.",
+        "card2,4": "Además, con sus analistas Alvaro Linero y David Antúnez, han llegado ha formar una gran alianza y han formado la mayor red de compra venta armamentística de EEUU, dominando el mercado y siendo los principales proveedores del ejército militar estadounidense."
     }
 }

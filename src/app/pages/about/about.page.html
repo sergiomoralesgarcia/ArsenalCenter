@@ -1,15 +1,45 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-back-button slot="start" defaultHref="/">Home</ion-back-button>
     <ion-title>About</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-title>{{ 'about.title' | translate }}</ion-title>
-    <ion-row>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum nam earum magnam sapiente. Reiciendis optio dolorum commodi maiores similique asperiores quia, quas, aut numquam, rem earum animi? Error, odio amet?
-    </ion-row>
-  </ion-grid>
+<ion-content class="box">
+  <ion-row class="fila1">
+    <ion-col size="12"  size-sm="6" >
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ 'about.title1' | translate }}</ion-card-title>
+          <ion-card-subtitle>{{ 'about.card1,1' | translate }}</ion-card-subtitle>
+          <ion-card-subtitle>{{ 'about.card1,2' | translate }}
+          </ion-card-subtitle>
+          <ion-card-subtitle>{{ 'about.card1,3' | translate }}</ion-card-subtitle>
+          <ion-card-subtitle>{{ 'about.card1,4' | translate }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-col > 
+    <ion-col size="12"  size-sm="6" >
+      <ion-img src="https://drive.google.com/uc?export=view&id=1kJwRIKV4RfL3Tuq18oxsE36cLpSPA4ou"></ion-img>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="fila2">
+    <ion-col size="12"  size-sm="6" >
+      <ion-img src="https://drive.google.com/uc?export=view&id=1wY-_USJ_C6QqiDBoYRf0jaZcISRn7c8n"></ion-img>
+    </ion-col>
+    <ion-col size="12"  size-sm="6" >
+      <ion-card class="card2">
+        <ion-card-header>
+          <ion-card-title>{{ 'about.title2' | translate }}</ion-card-title>
+          <ion-card-subtitle>{{ 'about.card2,1' | translate }}</ion-card-subtitle>
+          <ion-card-subtitle>{{ 'about.card2,2' | translate }}
+          </ion-card-subtitle>
+          <ion-card-subtitle>{{ 'about.card2,3' | translate }}</ion-card-subtitle>
+          <ion-card-subtitle>{{ 'about.card2,4' | translate }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </ion-col > 
+    
+  </ion-row>
 </ion-content>

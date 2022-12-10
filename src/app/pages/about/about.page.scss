@@ -1,20 +1,62 @@
-ion-content{
+ion-content {
     position: relative;
     margin: 0;
-    --background: url("../../../assets/greenBackImg.jpg");
 }
 
-ion-toolbar{
+ion-toolbar {
     --background: #000000bc;
     color: rgba(255, 255, 255, 0.892);
 }
 
 
-::selection { 
+::selection {
     background: #3bbc08ed;
-    color:#fff;
-}
-
-ion-row, ion-title{
     color: #fff;
 }
+
+ion-row,
+ion-title {
+    color: #fff;
+}
+
+ion-img {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+ion-card {
+    background-color: rgb(47, 54, 50);
+
+}
+
+ion-card-title {
+    color: rgb(252, 252, 252);
+}
+
+ion-card-subtitle {
+    color: rgb(252, 252, 252);
+}
+
+.fila1{
+    background: linear-gradient(to right, #16de55, #064708);
+}
+
+.fila2{
+    background: linear-gradient(to right, #262927, #949c94);
+}
+
+.card2{
+    background-color: rgb(17, 76, 43);
+    display: block;
+    margin: auto;
+}
+
+.box {
+
+    color: white;
+    padding: 6rem 1rem;
+    margin: 4rem;
+    font-size: 100px;
+}
+
