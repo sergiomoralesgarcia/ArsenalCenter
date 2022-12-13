@@ -46,7 +46,7 @@ export class AccessorySelectableComponent implements OnInit, ControlValueAccesso
   } 
 
   onAccessoryClicked(accessory:Accessory, accordion:IonAccordionGroup){
-    console.log(accessory);
+    //console.log(accessory);
     this.selectedAccessory = accessory;
     accordion.value='';
     this.propagateChange(this.selectedAccessory.id);

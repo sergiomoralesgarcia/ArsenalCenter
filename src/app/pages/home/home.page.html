@@ -15,9 +15,8 @@
     </ion-toolbar>
   </ion-header>
   <div class="translate">
-    <ion-label translate>Change Language</ion-label>
     <ion-select [(ngModel)]='language' (ionChange)='languageChange()'
-      [placeholder]='"home.languageChangePlaceholder" | translate'>Chan
+      [placeholder]='"home.languageChangePlaceholder" | translate'>
       <ion-select-option value='es'>Español</ion-select-option>
       <ion-select-option value='en'>English</ion-select-option>
     </ion-select>

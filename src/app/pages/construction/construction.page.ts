@@ -3,7 +3,9 @@ import { AlertController, ModalController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { ConstructionDetailComponent } from 'src/app/core/components/construction-detail/construction-detail.component';
 import { Construction } from 'src/app/core/models/costruction.model';
+import { accessoryService } from 'src/app/core/services/accessory.service';
 import { ConstructionService } from 'src/app/core/services/cosntruction.service';
+import { weaponService } from 'src/app/core/services/weapon.service';
 
 @Component({
   selector: 'app-construction',
@@ -18,7 +20,9 @@ export class ConstructionPage implements OnInit {
     private constructionsSvc:ConstructionService,
     private modal:ModalController,
     private alert:AlertController,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private weaponSvc: weaponService,
+    private accessorySvc: accessoryService
   ) { }
 
   languageChange() {  
@@ -35,7 +39,7 @@ export class ConstructionPage implements OnInit {
     const modal = await this.modal.create({
       component:ConstructionDetailComponent,
       componentProps:{
-        person:construction
+        construction:construction
       },
       cssClass:"modal-full-right-side"
     });
@@ -44,10 +48,26 @@ export class ConstructionPage implements OnInit {
       if(result && result.data){
         switch(result.data.mode){
           case 'New':
-            this.constructionsSvc.addConstruction(result.data.construction);
+            //console.log(result.data.constructor)
+            var arma = this.weaponSvc.getWeaponById(result.data.constructor.idWeapon) 
+            //console.log(arma)
+            var accesorio = this.accessorySvc.getAccessoryById(result.data.constructor.idAccessory) 
+            //console.log(accesorio) ; 
+            if (arma != undefined && accesorio!= undefined){
+              var damage = arma?.damage + accesorio?.damage
+              var accuracy = arma?.accuracy + accesorio?.accuracy
+              var range = arma?.range + accesorio?.range
+              var cadence = arma?.cadence + accesorio?.cadence
+              var mobility = arma?.mobility + accesorio?.mobility
+
+              this.constructionsSvc.addConstruction(result.data.construction);
+            } 
+            
+            
+            
             break;
           case 'Edit':
-            this.constructionsSvc.updateConstruction(result.data.construction);
+            this.constructionsSvc.updateConstruction(result.data.constructor);
             break;
           default:
         }
@@ -61,7 +81,7 @@ export class ConstructionPage implements OnInit {
 
   async onDeleteAlert(construction: Construction){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que desear borrar la asignación de tarea?',
+      header: '¿Está seguro de que desear borrar el arma vinculada?',
       buttons: [
         {
           text: 'Cancelar',

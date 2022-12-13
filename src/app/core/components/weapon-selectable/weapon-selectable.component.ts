@@ -42,16 +42,12 @@ export class WeaponSelectableComponent implements OnInit, ControlValueAccessor {
 
   ngOnInit() {}
 
-  getPeople(){
+  getWeapon(){
     return this.weaponSvc.getWeapon();
   } 
 
-  getTime(){ //Devuelve la fecha
-    return this.selectedWeapon;
-  }
 
   onWeaponClicked(weapon:Weapon, accordion:IonAccordionGroup){
-    console.log(weapon);
     this.selectedWeapon = weapon;
     accordion.value='';
     this.propagateChange(this.selectedWeapon.id);

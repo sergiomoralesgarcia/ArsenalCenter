@@ -31,7 +31,7 @@ export class ConstructionService {
     ];
 
     private constructionSubject: BehaviorSubject<Construction[]> = new BehaviorSubject(this._constructions);
-    public people$ = this.constructionSubject.asObservable();
+    public weapon$ = this.constructionSubject.asObservable();
 
     id: number = this._constructions.length + 1;
     constructor() { }
@@ -44,11 +44,11 @@ export class ConstructionService {
         return this._constructions.find(a => a.id == id);
     }
 
-    getConstructionsByTaskId(idTask: number): Construction[] {
-        return this._constructions.filter(a => a.idAccessory == idTask);
+    getConstructionsByAccessoryId(idAccessory: number): Construction[] {
+        return this._constructions.filter(a => a.idAccessory == idAccessory);
     }
 
-    getConstructionsByPersonId(idWeapon: number): Construction[] {
+    getConstructionsByWeaponId(idWeapon: number): Construction[] {
         return this._constructions.filter(a => a.idWeapon == idWeapon);
     }
 

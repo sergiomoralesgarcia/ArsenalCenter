@@ -4,6 +4,7 @@ import { WeaponDetailComponent } from 'src/app/core/components/weapon-detail/wea
 import { Weapon } from 'src/app/core/models/weapon.model';
 import { weaponService } from 'src/app/core/services/weapon.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ConstructionService } from 'src/app/core/services/cosntruction.service';
 
 @Component({
   selector: 'app-weapon',
@@ -18,7 +19,8 @@ export class WeaponPage implements OnInit {
     private alert:AlertController,
     private modal: ModalController,
     private weaponService:weaponService, 
-    private translateService: TranslateService) { }
+    private translateService: TranslateService,
+    private constructionsSvc:ConstructionService) { }
 
     languageChange() {  
       this.translateService.use(this.language); 
@@ -108,8 +110,12 @@ export class WeaponPage implements OnInit {
   }
 
   
+
   onDeleteWeapon(weapon: Weapon){
+    if(!this.constructionsSvc.getConstructionsByWeaponId(weapon.id).length)
       this.onDeleteAlert(weapon);
+    else
+      this.onWeaponExistsAlert();
   }
 }
 

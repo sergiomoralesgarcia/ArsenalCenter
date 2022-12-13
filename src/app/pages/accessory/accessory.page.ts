@@ -4,6 +4,7 @@ import { AccessoryDetailComponent } from 'src/app/core/components/accessory-deta
 import { Accessory } from 'src/app/core/models/accessory.model';
 import { accessoryService } from 'src/app/core/services/accessory.service';
 import { TranslateService } from '@ngx-translate/core';
+import { ConstructionService } from 'src/app/core/services/cosntruction.service';
 
 @Component({
   selector: 'app-accessory',
@@ -18,7 +19,8 @@ export class AccessoryPage implements OnInit {
     private alert:AlertController,
     private modal: ModalController,
     private accessoryService:accessoryService,
-    private translateService: TranslateService) { }
+    private translateService: TranslateService,
+    private constructionsSvc:ConstructionService) { }
 
     languageChange() {  
       this.translateService.use(this.language); 
@@ -110,5 +112,12 @@ export class AccessoryPage implements OnInit {
   
   onDeleteAccessory(accessory: Accessory){
       this.onDeleteAlert(accessory);
+  }
+
+  onDeleteWeapon(accessory: Accessory){
+    if(!this.constructionsSvc.getConstructionsByAccessoryId(accessory.id).length)
+      this.onDeleteAlert(accessory);
+    else
+      this.onAccessoryExistsAlert();
   }
 }

@@ -45,5 +45,8 @@
         "card2,2": "All the information has been reviewed by our specialist who has attended more than a dozen battlefields in which he has always emerged as a winner. It is capable of reloading a heavy rifle in 4.2 seconds and holds the world record for reloading an m16 in 2.5 seconds.",
         "card2,3": "The Activision Blizard company itself hired him to design the weapons for its games in 2019. Since then, the company has grown by 200% and is now in a state of peak form.",
         "card2,4": "In addition, with their analysts Alvaro Linero and David Antúnez, they have come to form a great alliance and have formed the largest arms purchase and sale network in the US, dominating the market and being the main suppliers of the US military."
+    },
+    "construction-detail":{
+        "edit":"Edit"
     }
 }

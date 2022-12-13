@@ -35,7 +35,7 @@ export class ConstructionsComponent implements OnInit {
   }
 
   getAccessory():Accessory{
-    console.log(new Date().toISOString());
+    //console.log(new Date().toISOString());
     var accessoryId = this.construction.idAccessory;
     if(accessoryId)
       return this.accessorySvc.getAccessoryById(accessoryId)!;

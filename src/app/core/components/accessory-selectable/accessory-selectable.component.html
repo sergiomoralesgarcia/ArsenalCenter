@@ -5,11 +5,11 @@
         <ion-avatar class="accessory">
           <img *ngIf="!selectedAccessory?.image" alt="Silhouette of a accessory's head"
             src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          <img *ngIf="selectedAccessory?.image" alt="Accessory image" [src]="selectedAccessory?.image" />
+          <img *ngIf="selectedAccessory?.image" alt="Accessory image" [src]="selectedAccessory.image" />
         </ion-avatar>
-        <ion-label>{{selectedAccessory?.name}}, {{selectedAccessory?.type}}</ion-label>
+        <ion-label>{{selectedAccessory.name}}, {{selectedAccessory.type}}</ion-label>
       </ng-container>
-      <ion-label *ngIf="!selectedAccessory">Selecciona una persona:</ion-label>
+      <ion-label *ngIf="!selectedAccessory">Selecciona un accesorio:</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
       <ion-list>
