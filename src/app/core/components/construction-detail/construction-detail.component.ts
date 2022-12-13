@@ -40,7 +40,11 @@ export class ConstructionDetailComponent implements OnInit {
       id: [null],
       idTask: [0, [Validators.min(1)]],
       idPerson: [0, [Validators.min(1)]],
-      dateAndTime: ['', [Validators.required]],
+      damage:['', [Validators.required]],
+      accuracy:['', [Validators.required]],
+      range:['', [Validators.required]],
+      cadence:['', [Validators.required]],
+      mobility:['', [Validators.required]],
     });
   }
 
