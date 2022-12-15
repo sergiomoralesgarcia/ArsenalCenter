@@ -17,7 +17,6 @@ import { ConstructionPageRoutingModule } from '../pages/construction/constructio
 import { ConstructionDetailComponent } from './components/construction-detail/construction-detail.component';
 import { AccessorySelectableComponent } from './components/accessory-selectable/accessory-selectable.component';
 import { WeaponSelectableComponent } from './components/weapon-selectable/weapon-selectable.component';
-import { ReproductorComponent } from './components/reproductor/reproductor.component';
 import { SoundSelectableComponent } from './components/sound-selectable/sound-selectable.component';
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -31,7 +30,7 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
         }
     })],
-    declarations: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent , ConstructionDetailComponent, AccessorySelectableComponent, WeaponSelectableComponent, ReproductorComponent, SoundSelectableComponent],
+    declarations: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent , ConstructionDetailComponent, AccessorySelectableComponent, WeaponSelectableComponent, SoundSelectableComponent],
     exports: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent]
 })
 

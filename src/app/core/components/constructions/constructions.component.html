@@ -1,8 +1,8 @@
-<ion-card>
+<ion-card [ngStyle]="{background: '#2f3632'}">
   <ion-card-header>
       <img id="weapon" *ngIf="getWeapon()?.image" alt="Weapon picture" [src]="getWeapon().image" /><h1>+</h1>
       <img class="access" id="accessory" *ngIf="getAccessory()?.image" alt="Accessory picture" [src]="getAccessory().image" />
-      <ion-card-subtitle>{{'constructions.damage' | translate }}:{{construction.damage}} /100</ion-card-subtitle>
+      <ion-card-subtitle>{{ 'constructions.damage' | translate }}:           {{construction.damage}}/100</ion-card-subtitle>
       <ion-card-subtitle>{{ 'constructions.accuracy' | translate }}: {{construction.accuracy}}/100</ion-card-subtitle>
       <ion-card-subtitle>{{ 'constructions.range' | translate }}: {{construction.range}}/100</ion-card-subtitle>
       <ion-card-subtitle>{{ 'constructions.cadence' | translate }}: {{construction.cadence}}/100</ion-card-subtitle>

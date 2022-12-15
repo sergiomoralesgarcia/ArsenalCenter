@@ -10,7 +10,7 @@ export class soundService {
         {
             id: 1,
             type: 'Heavy',
-            sound: "https://drive.google.com/uc?export=view&id=1MPv4VRNtOwcEbSXR2moeMk7WZAtW8PUX"
+            sound: "https://drive.google.com/uc?export=view&id=1aOS_BSE9rPq-WKAmyC5HzfpwDVOWKij7"
         },
         {
             id: 2,
@@ -19,18 +19,18 @@ export class soundService {
         },
         {
             id: 3,
-            type: 'Medium 2',
-            sound: ""
+            type: 'Light 1',
+            sound: "https://drive.google.com/uc?export=view&id=1x_ZuiuZ8SVx-ev4p-ZMzr0Rkc7-k6IDc"
         },
         {
             id: 4,
-            type: 'Light 1',
-            sound: ""
+            type: 'Medium 2',
+            sound: "https://drive.google.com/uc?export=view&id=1eut0Beti73v7ZQ7cDptLM63G84gHH419"
         },
         {
             id: 5,
-            type: 'Light 2',
-            sound: ""
+            type: 'Medium 2',
+            sound: "https://drive.google.com/uc?export=view&id=18Lp0L-3wj7o8OvMCq1ODyueYoCCSZxe4"
         }
     ]
 

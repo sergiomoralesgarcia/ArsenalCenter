@@ -53,5 +53,43 @@
         "range": "Rango",
         "cadence": "Cadencia",
         "mobility": "Mobilidad"
+    },
+    "sound-selectable":{
+        "title":"Selecciona un sonido"
+    },
+
+    "weapon-detail": {
+        "title": "Detalles del arma",
+        "close": "Cerrar",
+        "name": "nombre",
+        "type": "tipo",
+        "damage": "daño",
+        "accuracy": "precisión",
+        "range": "rango",
+        "cadence": "cadencia",
+        "mobility": "mobilidad",
+        "url": "URL",
+        "btn_update": "Modificar",
+        "btn_add": "Añadir"
+    },
+
+    "accessory-detail": {
+        "title": "Detalles del arma",
+        "close": "Cerrar",
+        "name": "nombre",
+        "type": "tipo",
+        "damage": "daño",
+        "accuracy": "precisión",
+        "range": "rango",
+        "cadence": "cadencia",
+        "mobility": "mobilidad",
+        "url": "URL",
+        "btn_update": "Modificar",
+        "btn_add": "Añadir"
+    },
+
+    "construction-detail": {
+        "btn_update": "Modificar",
+        "btn_add": "Añadir"
     }
 }

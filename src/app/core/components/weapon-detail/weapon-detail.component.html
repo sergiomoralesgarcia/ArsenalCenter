@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Details of weapon</ion-title>
+    <ion-title>{{ 'weapon-detail.title' | translate }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="onDismiss()" >Close</ion-button>
+      <ion-button (click)="onDismiss()" >{{ 'weapon-detail.close' | translate  }}</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -10,48 +10,54 @@
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
     <ion-item>
       <ion-label position="floating"  >
-        Name
+        {{ 'weapon-detail.name' | translate | titlecase }}
       </ion-label>
       <ion-input type="text" placeholder="Introduce el nombre" formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Type
+        {{ 'weapon-detail.type' | translate | titlecase }}
       </ion-label>
       <ion-input type="text" placeholder="Introduce el tipo" formControlName="type"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Damage
+        {{ 'weapon-detail.damage' | translate  | titlecase}}
       </ion-label>
       <ion-input type="text" placeholder="Introduce el apodo" formControlName="damage"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Accuracy
+        {{ 'weapon-detail.accuracy' | translate | titlecase}}
       </ion-label>
       <ion-input type="text" placeholder="Introduce la precision" formControlName="accuracy"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Range
+        {{ 'weapon-detail.range' | translate | titlecase}}
       </ion-label>
       <ion-input type="text" placeholder="Introduce el rango de disparo" formControlName="range"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Cadence
+        {{ 'weapon-detail.cadence' | translate | titlecase}}
       </ion-label>
       <ion-input type="text" placeholder="Introduce la cadencia" formControlName="cadence"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating" >
-        Mobility
+        {{ 'weapon-detail.mobility' | translate | titlecase}}
       </ion-label>
       <ion-input type="text" placeholder="Introduce la mobilidad" formControlName="mobility"></ion-input>
     </ion-item>
-    
-    <ion-button color="success" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+    <ion-item>
+      <ion-label position="floating" >
+        {{ 'weapon-detail.url' | translate }}
+      </ion-label>
+      <ion-input type="text" placeholder="Introduce la url de la imagen" formControlName="image"></ion-input>
+    </ion-item>
     <app-sound-selectable formControlName="idSound"></app-sound-selectable>
+    
+    <ion-button color="success" [disabled]="!form.valid" type="submit">{{mode=="Edit"?['weapon-detail.btn_update' | translate]:['weapon-detail.btn_add' | translate]}}</ion-button>
   </form>
 </ion-content>

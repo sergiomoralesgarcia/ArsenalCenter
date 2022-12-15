@@ -27,14 +27,10 @@
 
   <div id="container">
 
-    <p translate [translateParams]="{ lang: language }">home.content</p>
     <a title="Aquí ponemos el título de la foto">
-      <img class="zoom" id="img-weapon" (click)="openWeapon()" src="assets/guns.jfif" alt="Armas" width="300"
-        height="203" />
-      <img class="zoom" id="img-charger" (click)="openAccessory()" src="assets/cargadores.jpg" alt="cargadores"
-        width="300" height="203" />
-      <img class="zoom" id="img-const" (click)="openConstruct()" src="assets/ark7.webp" alt="cargadores" width="300"
-        height="203" />
+      <img class="zoom" id="img-weapon" (click)="openWeapon()" src="assets/guns.jfif" alt="Armas" />
+      <img class="zoom" id="img-charger" (click)="openAccessory()" src="assets/cargadores.jpg" alt="cargadores"/>
+      <img class="zoom" id="img-const" (click)="openConstruct()" src="assets/ark7.webp" alt="cargadores" />
     </a>
   </div>
 </ion-content>

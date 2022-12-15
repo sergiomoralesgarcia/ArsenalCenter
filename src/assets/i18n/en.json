@@ -46,9 +46,7 @@
         "card2,3": "The Activision Blizard company itself hired him to design the weapons for its games in 2019. Since then, the company has grown by 200% and is now in a state of peak form.",
         "card2,4": "In addition, with their analysts Alvaro Linero and David Antúnez, they have come to form a great alliance and have formed the largest arms purchase and sale network in the US, dominating the market and being the main suppliers of the US military."
     },
-    "construction-detail":{
-        "edit":"Edit"
-    },
+    
 
     "constructions":{
         "damage": "Damage",
@@ -56,5 +54,43 @@
         "range": "Range",
         "cadence": "Cadence",
         "mobility": "Mobility"
+    },
+
+    "sound-selectable":{
+        "title":"Select a sound"
+    },
+
+    "weapon-detail": {
+        "title": "Details of weapon",
+        "close": "close",
+        "name": "name",
+        "type": "type",
+        "damage": "damage",
+        "accuracy": "accuracy",
+        "range": "range",
+        "cadence": "cadence",
+        "mobility": "mobility",
+        "url": "URL"
+        
+    },
+
+    "accessory-detail": {
+        "title": "Details of weapon",
+        "close": "close",
+        "name": "name",
+        "type": "type",
+        "damage": "damage",
+        "accuracy": "accuracy",
+        "range": "range",
+        "cadence": "cadence",
+        "mobility": "mobility",
+        "url": "URL",
+        "btn_update": "Modify",
+        "btn_add": "Add"
+        
+    },
+    "construction-detail":{
+        "btn_update": "Modify",
+        "btn_add": "Add"
     }
 }

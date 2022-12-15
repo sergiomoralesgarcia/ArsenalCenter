@@ -87,9 +87,13 @@ export class weaponService {
         this._weapon = this._weapon.filter(p => p.id != id);
     }
 
+    
+    
     addWeapon(weapon: Weapon) {
         weapon.id = this.id++;
         this._weapon.push(weapon);
+        console.log(weapon);
+        
     }
 
     getWeaponBySoundId(idSound: number): Weapon[] {

@@ -1,10 +1,11 @@
-<ion-accordion-group [multiple]="true" #accordion>
+<ion-header [translucent]="true">
+<ion-accordion-group  [multiple]="true" #accordion>
   <ion-accordion value="first">
     <ion-item slot="header" color="light">
       <ng-container *ngIf="selectedSound!=null">
         <ion-label>{{selectedSound.type}}</ion-label>
       </ng-container>
-      <ion-label *ngIf="!selectedSound">Selecciona un sonido:</ion-label>
+      <ion-label *ngIf="!selectedSound">{{ 'sound-selectable.title' | translate }}:</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
       <ion-list>
@@ -14,4 +15,4 @@
       </ion-list>
     </div>
   </ion-accordion>
-</ion-accordion-group>
+</ion-accordion-group></ion-header>

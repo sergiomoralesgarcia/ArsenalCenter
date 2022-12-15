@@ -1,6 +1,7 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { Sound } from '../../models/sound.model';
 import { soundService } from '../../services/sound.service';
 
@@ -23,8 +24,16 @@ export class SoundSelectableComponent implements OnInit, ControlValueAccessor {
   isDisabled:boolean = false;
 
   constructor(
-    private soundSvc:soundService
+    private soundSvc:soundService,
+    private translateService: TranslateService
   ) { }
+
+
+  language: string = this.translateService.currentLang;
+
+  languageChange() {  
+    this.translateService.use(this.language);  
+  }
 
   writeValue(obj: any): void {
     this.selectedSound = this.soundSvc.getSoundById(obj)!;

@@ -6,7 +6,7 @@
           <img *ngIf="!selectedWeapon?.image" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
           <img *ngIf="selectedWeapon?.image" alt="Weapon image" [src]="selectedWeapon.image" />
         </ion-avatar>
-        <ion-label>{{selectedWeapon.name}}</ion-label>
+        <ion-label>{{selectedWeapon.name}}, {{selectedWeapon.type}}</ion-label>
       </ng-container>
       <ion-label *ngIf="!selectedWeapon">Selecciona un arma:</ion-label>
     </ion-item>
@@ -17,7 +17,7 @@
             <img *ngIf="!weapon.image" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
             <img *ngIf="weapon.image" [src]="weapon.image" />
           </ion-avatar>
-          <ion-label>{{weapon.name}}</ion-label>
+          <ion-label>{{weapon.name}}, {{weapon.type}}</ion-label>
         </ion-item>
       </ion-list>
     </div>

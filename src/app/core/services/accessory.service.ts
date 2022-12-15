@@ -44,11 +44,11 @@ export class accessoryService {
             id: 4,
             name: 'Sight',
             type: 'Hight',
-            damage: 77,
-            accuracy: 74,
-            range: 75,
-            cadence: 62,
-            mobility: 69,
+            damage: 0,
+            accuracy: 8,
+            range: 2,
+            cadence: 3,
+            mobility: -2,
             image: "https://drive.google.com/uc?export=view&id=13VZmVQboVQDd6fhRbYavah9dng4DCg2u"
         },
         {
