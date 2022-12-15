@@ -70,7 +70,15 @@
         "range": "range",
         "cadence": "cadence",
         "mobility": "mobility",
-        "url": "URL"
+        "url": "URL",
+        "textName": "Enter the name",
+        "textType": "Enter the type",
+        "textDamage": "Enter the damage",
+        "textAccuracy": "Enter the accuracy",
+        "textRange": "Enter the range",
+        "textCadence": "Enter the cadence",
+        "textMobility": "Enter the mobility",
+        "textUrl": "Enter the URL for the image"
         
     },
 
@@ -86,8 +94,15 @@
         "mobility": "mobility",
         "url": "URL",
         "btn_update": "Modify",
-        "btn_add": "Add"
-        
+        "btn_add": "Add",
+        "textName": "Enter the name",
+        "textType": "Enter the type",
+        "textDamage": "Enter the damage",
+        "textAccuracy": "Enter the accuracy",
+        "textRange": "Enter the range",
+        "textCadence": "Enter the cadence",
+        "textMobility": "Enter the mobility",
+        "textUrl": "Enter the URL for the image"
     },
     "construction-detail":{
         "btn_update": "Modify",

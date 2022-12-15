@@ -70,7 +70,15 @@
         "mobility": "mobilidad",
         "url": "URL",
         "btn_update": "Modificar",
-        "btn_add": "Añadir"
+        "btn_add": "Añadir",
+        "textName": "Introduce el nombre",
+        "textType": "Introduce el tipo",
+        "textDamage": "Introduce el daño",
+        "textAccuracy": "Introduce la precisión",
+        "textRange": "Introduce el rango de tiro",
+        "textCadence": "Introduce el cadencia",
+        "textMobility": "Introduce la mobilidad",
+        "textUrl": "Introduce la URL de la imagen"
     },
 
     "accessory-detail": {
@@ -85,7 +93,15 @@
         "mobility": "mobilidad",
         "url": "URL",
         "btn_update": "Modificar",
-        "btn_add": "Añadir"
+        "btn_add": "Añadir",
+        "textName": "Introduce el nombre",
+        "textType": "Introduce el tipo",
+        "textDamage": "Introduce el daño",
+        "textAccuracy": "Introduce la precisión",
+        "textRange": "Introduce el rango de tiro",
+        "textCadence": "Introduce el cadencia",
+        "textMobility": "Introduce la mobilidad",
+        "textUrl": "Introduce la URL de la imagen"
     },
 
     "construction-detail": {

@@ -19,7 +19,7 @@ ion-title {
     color: #fff;
 }
 
-ion-img {
+img {
     width: 50%;
     display: block;
     margin: auto;
@@ -59,4 +59,23 @@ ion-card-subtitle {
     margin: 4rem;
     font-size: 100px;
 }
+@media screen and (min-width: 575px) {
+    img {
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+    #img1{
+        padding: 20px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    img {
+        width: 50%;
+        display: block;
+        margin: auto;
+    }
+}
+
+
 
