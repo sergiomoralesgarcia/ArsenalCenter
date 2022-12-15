@@ -40,7 +40,6 @@ export class ConstructionsComponent implements OnInit {
     if(accessoryId)
       return this.accessorySvc.getAccessoryById(accessoryId)!;
       return undefined!;
-    
   }
 
   onEditClick(){

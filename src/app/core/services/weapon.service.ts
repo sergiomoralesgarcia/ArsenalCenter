@@ -16,7 +16,8 @@ export class weaponService {
             range: 75,
             cadence: 38,
             mobility: 47,
-            image: "https://drive.google.com/uc?export=view&id=1nTK6ejIhts2B7nn9kTW9rqhNuQpdUIUH"
+            image: "https://drive.google.com/uc?export=view&id=1nTK6ejIhts2B7nn9kTW9rqhNuQpdUIUH",
+            idSound:1
         },
         {
             id: 2,
@@ -27,7 +28,8 @@ export class weaponService {
             range: 67,
             cadence: 48,
             mobility: 67,
-            image: "https://drive.google.com/uc?export=view&id=1iZcs9FHP-xlgaq7DdKd-wJV0u0Odr-j1"
+            image: "https://drive.google.com/uc?export=view&id=1iZcs9FHP-xlgaq7DdKd-wJV0u0Odr-j1",
+            idSound:2
         },
         {
             id: 3,
@@ -38,7 +40,8 @@ export class weaponService {
             range: 51,
             cadence: 81,
             mobility: 79,
-            image: "https://drive.google.com/uc?export=view&id=1L7QNOCjsV_Rr-rF6VRhklOuQ70aLhSdZ"
+            image: "https://drive.google.com/uc?export=view&id=1L7QNOCjsV_Rr-rF6VRhklOuQ70aLhSdZ",
+            idSound:3
         },
         {
             id: 4,
@@ -49,7 +52,8 @@ export class weaponService {
             range: 75,
             cadence: 62,
             mobility: 69,
-            image: "https://drive.google.com/uc?export=view&id=1vUkAWpEKNfQpEjx0BGEFNCUk5BQA_Moj"
+            image: "https://drive.google.com/uc?export=view&id=1vUkAWpEKNfQpEjx0BGEFNCUk5BQA_Moj",
+            idSound:4
         },
         {
             id: 5,
@@ -60,7 +64,8 @@ export class weaponService {
             range: 63,
             cadence: 70,
             mobility: 67,
-            image: "https://drive.google.com/uc?export=view&id=15wsXzzLJoiZFOqss6KSNFpOqhegA2tsA"
+            image: "https://drive.google.com/uc?export=view&id=15wsXzzLJoiZFOqss6KSNFpOqhegA2tsA",
+            idSound:5
         }
     ]
 
@@ -87,6 +92,10 @@ export class weaponService {
         this._weapon.push(weapon);
     }
 
+    getWeaponBySoundId(idSound: number): Weapon[] {
+        return this._weapon.filter(a => a.idSound == idSound);
+    }
+
     updateWeapon(weapon: Weapon) {
         var _weapon = this._weapon.find(p => p.id == weapon.id);
         if (_weapon) {
@@ -98,6 +107,7 @@ export class weaponService {
             _weapon.cadence = weapon.cadence;
             _weapon.mobility = weapon.mobility;
             _weapon.image = weapon.image;
+            _weapon.idSound = weapon.idSound;
         }
     }
 }

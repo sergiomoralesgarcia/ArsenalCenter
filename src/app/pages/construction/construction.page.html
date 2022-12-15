@@ -10,7 +10,6 @@
   <ion-grid>
   <ion-row>
     <ion-col *ngFor="let construction of getConstructions()" size="12" size-lg="4" size-sm="6">
-      <!--<app-assignment  [assignment]="assignment" (onEdit)="onEditAssign($event)" (onDelete)="onDeleteAssign($event)"></app-assignment>-->
       <app-constructions  [construction]="construction" (onEdit)="onEditConstruction($event)" (onDelete)="onDeleteConstruction($event)"></app-constructions>
     </ion-col>
   </ion-row>

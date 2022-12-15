@@ -24,6 +24,7 @@ export class WeaponDetailComponent implements OnInit {
       this.form.controls['cadence'].setValue(weapon.cadence);
       this.form.controls['mobility'].setValue(weapon.mobility);
       this.form.controls['image'].setValue(weapon.image);
+      this.form.controls['idSound'].setValue(weapon.id);
       this.mode = "Edit";
     }
   }
@@ -44,7 +45,8 @@ export class WeaponDetailComponent implements OnInit {
       range:['', [Validators.required]],
       cadence:['', [Validators.required]],
       mobility:['', [Validators.required]],
-      image:['']
+      image:[''],
+      idSound: [-1, [Validators.min(1)]],
     });
   }
   languageChange() {  

@@ -48,5 +48,13 @@
     },
     "construction-detail":{
         "edit":"Edit"
+    },
+
+    "constructions":{
+        "damage": "Damage",
+        "accuracy": "Accuracy",
+        "range": "Range",
+        "cadence": "Cadence",
+        "mobility": "Mobility"
     }
 }

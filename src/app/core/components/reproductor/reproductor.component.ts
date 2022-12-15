@@ -12,7 +12,6 @@ export class ReproductorComponent implements OnInit {
 
   constructor() {
     this.audio.src = "assets/M16Sound.mp3";
-    this.audio.src = "assets/SniperSound.mp3";
     this.audio.load();
   }
 

@@ -37,6 +37,7 @@ export class ConstructionDetailComponent implements OnInit {
       id: [null],
       idWeapon: [-1, [Validators.min(1)]],
       idAccessory: [-1, [Validators.min(1)]],
+      //damage: [ , [Validators.min()]],
     });
   }
 

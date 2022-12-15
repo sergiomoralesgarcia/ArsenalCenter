@@ -8,4 +8,5 @@ export interface Weapon{
     cadence:number;
     mobility:number;
     image?:string;
+    idSound:number;
 }

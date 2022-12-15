@@ -53,21 +53,43 @@ export class ConstructionPage implements OnInit {
             //console.log(arma)
             var accesorio = this.accessorySvc.getAccessoryById(result.data.constructor.idAccessory) 
             //console.log(accesorio) ; 
+            
             if (arma != undefined && accesorio!= undefined){
               var damage = arma?.damage + accesorio?.damage
               var accuracy = arma?.accuracy + accesorio?.accuracy
               var range = arma?.range + accesorio?.range
               var cadence = arma?.cadence + accesorio?.cadence
               var mobility = arma?.mobility + accesorio?.mobility
+              console.log(result.data.constructor); 
+              var constructor = result.data.constructor;
+              constructor.damage = damage
+              constructor.accuracy = accuracy
+              constructor.range = range
+              constructor.cadence = cadence
+              constructor.mobility = mobility
 
-              this.constructionsSvc.addConstruction(result.data.construction);
+              this.constructionsSvc.addConstruction(constructor);
             } 
-            
-            
-            
             break;
           case 'Edit':
-            this.constructionsSvc.updateConstruction(result.data.constructor);
+            var arma = this.weaponSvc.getWeaponById(result.data.constructor.idWeapon) 
+            //console.log(arma)
+            var accesorio = this.accessorySvc.getAccessoryById(result.data.constructor.idAccessory) 
+            if (arma != undefined && accesorio!= undefined){
+              var damage = arma?.damage + accesorio?.damage
+              var accuracy = arma?.accuracy + accesorio?.accuracy
+              var range = arma?.range + accesorio?.range
+              var cadence = arma?.cadence + accesorio?.cadence
+              var mobility = arma?.mobility + accesorio?.mobility
+              console.log(result.data.constructor); 
+              var constructor = result.data.constructor;
+              constructor.damage = damage
+              constructor.accuracy = accuracy
+              constructor.range = range
+              constructor.cadence = cadence
+              constructor.mobility = mobility
+            this.constructionsSvc.updateConstruction(constructor);
+            }
             break;
           default:
         }

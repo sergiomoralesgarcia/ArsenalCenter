@@ -52,5 +52,6 @@
     </ion-item>
     
     <ion-button color="success" [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modify":"Add"}}</ion-button>
+    <app-sound-selectable formControlName="idSound"></app-sound-selectable>
   </form>
 </ion-content>

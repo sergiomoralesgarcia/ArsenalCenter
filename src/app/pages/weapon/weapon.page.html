@@ -12,7 +12,7 @@
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let weapons of getWeapon()" size="12" size-lg="4" size-sm="6">
-        <app-weapons [weapon]="weapons" (onEdit)="onEditWeapon($event)"(onDelete)="onDeleteWeapon($event)" ></app-weapons>
+        <app-weapons [weapon]="weapons" (onEdit)="onEditWeapon($event)"(onDelete)="onDeleteWeapon($event)"></app-weapons>
       </ion-col>
     </ion-row>
   </ion-grid>

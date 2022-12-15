@@ -1,7 +1,6 @@
 ion-content{
   position: relative;
   margin: 0;
-  --background: rgba(0, 0, 0, 0.828);
 }
 
 video {
@@ -43,7 +42,7 @@ video {
 }
 
 #myVideo{
-  width: 100%;
+  width: 10%;
 }
 
 ion-toolbar{
@@ -51,10 +50,6 @@ ion-toolbar{
   color: rgb(0, 0, 0);
 }
 
-ion-content {
-  position: relative;
-  margin: 0;
-}
 .sect {
   width: 100%;
   min-height: 500px;
@@ -116,3 +111,11 @@ ion-select {
   width: 180px;
 }
 
+@media screen and (min-width: 1270px) {
+  
+}
+@media screen and (max-width: 1270px) {
+ion-content{
+  --background: url("../../../assets/greenBackImg.jpg");
+}
+}

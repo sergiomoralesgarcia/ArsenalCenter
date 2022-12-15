@@ -1,20 +1,20 @@
 <ion-card>
   <ion-card-header [translucent]="true">
-      <img *ngIf="!weapon.image" src="\assets\user.png" />
-      <img *ngIf="weapon.image" alt="Weapon image" [src]="weapon.image" />
-    <ion-card-title>{{weapon.name}}, {{weapon.type}}</ion-card-title>
-    <ion-card-subtitle>{{ 'weapons.damage' | translate }}: {{weapon.damage}}/100</ion-card-subtitle>
-    <ion-card-subtitle>{{ 'weapons.accuracy' | translate }}: {{weapon.accuracy}}/100</ion-card-subtitle>
-    <ion-card-subtitle>{{ 'weapons.range' | translate }}: {{weapon.range}}/100</ion-card-subtitle>
-    <ion-card-subtitle>{{ 'weapons.cadence' | translate }}: {{weapon.cadence}}/100</ion-card-subtitle>
-    <ion-card-subtitle>{{ 'weapons.mobility' | translate }}: {{weapon.mobility}}/100</ion-card-subtitle>
+      <img *ngIf="!weaponData.image" src="\assets\user.png" />
+      <img *ngIf="weaponData.image" alt="Weapon image" [src]="weaponData.image" />
+    <ion-card-title>{{weaponData.name}}, {{weaponData.type}}</ion-card-title>
+    <ion-card-subtitle>{{ 'weapons.damage' | translate }}: {{weaponData.damage}}/100</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'weapons.accuracy' | translate }}: {{weaponData.accuracy}}/100</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'weapons.range' | translate }}: {{weaponData.range}}/100</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'weapons.cadence' | translate }}: {{weaponData.cadence}}/100</ion-card-subtitle>
+    <ion-card-subtitle>{{ 'weapons.mobility' | translate }}: {{weaponData.mobility}}/100</ion-card-subtitle>
     <ion-button icon-only fill="clear" (click)="onEditClick()"><ion-icon style="zoom:1.5" name="pencil-sharp"></ion-icon></ion-button>
     <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon style="zoom:1.5" name="close-sharp"></ion-icon></ion-button>
       
-    <app-reproductor></app-reproductor>
-    
-  
-  
+    <!--<app-reproductor></app-reproductor>-->
+    <ion-button ><ion-icon name="volume-high-outline"><audio id="sound" *ngIf="getSound()?.sound" alt="sound" [src]="getSound().sound"></audio></ion-icon></ion-button>
+    <audio controls > <source src="{{sound}}" type="audio/ogg"> </audio>
+
     
   </ion-card-header>
 </ion-card>

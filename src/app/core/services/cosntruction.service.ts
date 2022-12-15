@@ -12,21 +12,21 @@ export class ConstructionService {
             id: 1,
             idWeapon: 1,
             idAccessory: 1,
-            damage: 79,
-            accuracy: 82,
-            range: 75,
-            cadence: 38,
-            mobility: 47,
+            damage: 0,
+            accuracy: 0,
+            range: 0,
+            cadence: 0,
+            mobility: 0,
         },
         {
             id: 2,
             idWeapon: 2,
             idAccessory: 2,
-            damage: 79,
-            accuracy: 82,
-            range: 75,
-            cadence: 38,
-            mobility: 47,
+            damage: 0,
+            accuracy: 0,
+            range: 0,
+            cadence: 0,
+            mobility: 0,
         }
     ];
 
@@ -57,7 +57,9 @@ export class ConstructionService {
     }
 
     addConstruction(construction: Construction) {
+        console.log(this.id++)
         construction.id = this.id++;
+        
         this._constructions.push(construction);
     }
 
