@@ -13,3 +13,6 @@ Esta aplicación está basada en un editor de armas de cualquier videojuego del 
 
 
 Esta aplicación está desarrollada con las herramientas Ionic, 
+
+## Video explicativo
+https://youtu.be/XAoaNTLADoo
