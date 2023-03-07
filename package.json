@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0",
+    "@angular/fire": "^7.5.0",
     "@angular/forms": "^14.0.0",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
@@ -23,6 +24,7 @@
     "@ionic/angular": "^6.1.9",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "firebase": "^9.17.2",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
@@ -58,5 +60,15 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.7.2"
+  },
+  "description": "��#\u0000 \u0000A\u0000r\u0000s\u0000e\u0000n\u0000a\u0000l\u0000C\u0000e\u0000n\u0000t\u0000e\u0000r\u0000\r\u0000 \u0000",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiomoralesgarcia/ArsenalCenter.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiomoralesgarcia/ArsenalCenter/issues"
   }
 }
