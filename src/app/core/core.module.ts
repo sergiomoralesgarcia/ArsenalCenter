@@ -18,6 +18,8 @@ import { ConstructionDetailComponent } from './components/construction-detail/co
 import { AccessorySelectableComponent } from './components/accessory-selectable/accessory-selectable.component';
 import { WeaponSelectableComponent } from './components/weapon-selectable/weapon-selectable.component';
 import { SoundSelectableComponent } from './components/sound-selectable/sound-selectable.component';
+import { RegisterComponent } from '../pages/register/register.component';
+import { LoginComponent } from '../pages/login/login.component';
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
@@ -30,7 +32,7 @@ export function createTranslateLoader(http: HttpClient) {
         deps: [HttpClient]
         }
     })],
-    declarations: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent , ConstructionDetailComponent, AccessorySelectableComponent, WeaponSelectableComponent, SoundSelectableComponent],
+    declarations: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent , ConstructionDetailComponent, AccessorySelectableComponent, WeaponSelectableComponent, SoundSelectableComponent, RegisterComponent, LoginComponent],
     exports: [WeaponsComponent, WeaponDetailComponent, AccessoriesComponent, AccessoryDetailComponent]
 })
 

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import{canActivate, redirectUnauthorizedTo} from '@angular/fire/auth-guard'
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HomePageModule } from './pages/home/home.module';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
+    ...canActivate(() => redirectUnauthorizedTo(['/register']))
   },
   {
     path: 'weapon',
@@ -28,6 +28,8 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
   },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
