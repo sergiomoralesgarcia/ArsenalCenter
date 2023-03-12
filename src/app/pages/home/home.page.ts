@@ -42,7 +42,7 @@ language: string = this.translateService.currentLang;
   onClick() {
     this.userService.logout()
       .then(() => {
-        this.router.navigate(['/register']);
+        this.router.navigate(['/login']);
       })
       .catch(error => console.log(error));
   }

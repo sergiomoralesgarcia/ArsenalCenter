@@ -10,23 +10,27 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
-    ...canActivate(() => redirectUnauthorizedTo(['/register']))
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'weapon',
-    loadChildren: () => import('./pages/weapon/weapon.module').then( m => m.WeaponPageModule)
+    loadChildren: () => import('./pages/weapon/weapon.module').then( m => m.WeaponPageModule),
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'accessory',
-    loadChildren: () => import('./pages/accessory/accessory.module').then( m => m.AccessoryPageModule)
+    loadChildren: () => import('./pages/accessory/accessory.module').then( m => m.AccessoryPageModule),
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'construction',
-    loadChildren: () => import('./pages/construction/construction.module').then( m => m.ConstructionPageModule)
+    loadChildren: () => import('./pages/construction/construction.module').then( m => m.ConstructionPageModule),
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   {
     path: 'about',
-    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule)
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutPageModule),
+    ...canActivate(() => redirectUnauthorizedTo(['/login']))
   },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent }

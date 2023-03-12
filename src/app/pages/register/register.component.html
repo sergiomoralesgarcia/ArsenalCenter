@@ -1,12 +1,23 @@
-<h2>Registro de usuario</h2>
-<form [formGroup]="formReg" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="text" class="form-control" formControlName="email">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-control" formControlName="password">
-    </div>
-    <input type="submit" value="Enviar">
-</form>
+<ion-content>
+    <form class="register" [formGroup]="formReg" (ngSubmit)="onSubmit()">
+        <h1>Register</h1>
+        <ion-list>
+            <ion-item lines="none">
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" formControlName="email">
+                </div>
+            </ion-item>
+            <ion-item>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" formControlName="password">
+                </div>
+                <span class="validationError" *ngIf="hasFormError('passwordProto')">error</span>
+            </ion-item>
+        </ion-list>
+        <div class="form-button right">
+            <ion-button [disabled]="!formReg.valid" (click)="onSubmit()">Save</ion-button>
+        </div>
+    </form>
+</ion-content>

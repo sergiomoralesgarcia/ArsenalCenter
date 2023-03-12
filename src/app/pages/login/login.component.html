@@ -1,13 +1,35 @@
-<h2>Login de usuario</h2>
-<form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
-    <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="text" class="form-control" formControlName="email">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Password</label>
-        <input type="password" class="form-control" formControlName="password">
-    </div>
-    <input type="submit" value="Enviar">
-</form>
-<button class="btn btn-info" (click)="onClick()">Login With Google</button>
+<ion-grid class="login">
+    <ion-row>
+        <ion-col>
+            <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+                <h1>Sign in</h1>
+                <div class="form-button right">
+                    <ion-button (click)="register()" color="primary" fill="clear">
+                        <small>Register</small>
+                    </ion-button>
+                </div>
+
+                <ion-list>
+                    <ion-item>
+                        <ion-label position="stacked">
+                            Email
+                        </ion-label>
+                        <ion-input [enterkeyhint]="'next'" autocomplete="email" type="text" formControlName="email"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">
+                            Password
+                        </ion-label>
+                        <ion-input (keyup.enter)="form.valid?onSubmit():null" [enterkeyhint]="'enter'"
+                            autocomplete="password" type="password" formControlName="password"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <div class="form-button right">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+            <button class="btn btn-info" (click)="onClick()">Login With Google</button>
+        </ion-col>
+    </ion-row>
+
+</ion-grid>

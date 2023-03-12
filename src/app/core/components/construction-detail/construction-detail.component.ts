@@ -22,6 +22,7 @@ export class ConstructionDetailComponent implements OnInit {
       this.form.controls['id'].setValue(construct.id);
       this.form.controls['idWeapon'].setValue(construct.id);
       this.form.controls['idAccessory'].setValue(construct.id);
+      this.form.controls['idAccessory'].setValue(construct.id);
       this.mode = "Edit";
     }
   }
