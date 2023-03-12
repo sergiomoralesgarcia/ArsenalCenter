@@ -10,3 +10,6 @@ Esta aplicación está basada en un editor de armas de cualquier videojuego del 
 
 ## Video explicativo
 https://youtu.be/XAoaNTLADoo
+
+## Video login con Firebase
+https://youtu.be/-EAqMq0M9r0
